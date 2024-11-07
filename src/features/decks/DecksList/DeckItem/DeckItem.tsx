@@ -24,7 +24,7 @@ export const DeckItem = ({ deck }: DeckProps) => {
 
   const handleEditButtonClick = () => {
     setIsLoading(true)
-    dispatch(updateDeckTC({ id: deck.id, name: `${deck.name} updated` })).finally(() => {
+    const resp = dispatch(updateDeckTC({ id: deck.id, name: `${deck.name} updated` })).finally(() => {
       setIsLoading(false)
     })
   }
